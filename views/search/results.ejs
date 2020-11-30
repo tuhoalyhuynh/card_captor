@@ -1,0 +1,15 @@
+<form method="GET" action="/search/results">
+    <input type="text" name="name" value="">
+    <button class="btn btn-primary" type="submit">Search</button>
+</form>
+
+<h1 class="text-center">Search results for "<%= name %>"</h1>
+<hr>
+<div class="container"> 
+    <% cards.forEach(function(card) { %>
+        <div class="well">
+            <a href="/pokemon/:id"><img src="<%= card.imageUrl %>" alt=""></a>
+            <a href="/pokemon/:id"><h3><%= card.name %></h3></a>
+        </div>
+    <% }); %>
+</div>

@@ -4,6 +4,22 @@ nav ul li {
   margin-right: .3em;
 }
 
+form {
+  margin: 0 auto;
+}
+
 h1 {
   color: navy;
+  text-align: center;
+}
+
+.container {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.well {
+  margin: 15px;
+  text-align: center;
 }

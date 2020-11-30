@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const layouts = require('express-ejs-layouts');
+const axios = require('axios').default;
 const session = require('express-session');
 const passport = require('./config/ppConfig');
 const flash = require('connect-flash');
@@ -56,7 +57,7 @@ app.get('/profile', isLoggedIn, (req, res) => {
 });
 
 app.use('/auth', require('./routes/auth'));
-
+app.use('/search', require('./routes/search'));
 
 const PORT = process.env.PORT || 8000;
 const server = app.listen(PORT, () => {
