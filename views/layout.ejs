@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Authentication</title>
+    <title>Card Captor</title>
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
@@ -12,7 +12,7 @@
       <nav>
         <ul>
           <% if (!currentUser) { %>
-            <li><a href="/auth/signup">Signup</a></li>
+            <li><a href="/auth/signup">Register</a></li>
             <li><a href="/auth/login">Login</a></li>
           <% } else { %> 
             <li><a href="/auth/logout">Logout</a></li>
@@ -21,7 +21,7 @@
         </ul>
       </nav>
     </header>
-    <h1>Authentication</h1>
+    <h1>Card Captor</h1>
     <%- body %>
   </body>
 </html>
