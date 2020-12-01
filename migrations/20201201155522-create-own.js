@@ -11,8 +11,14 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
-      cardId: {
-        type: Sequelize.INTEGER
+      apiId: {
+        type: Sequelize.STRING
+      },
+      name: {
+        type: Sequelize.STRING
+      },
+      imageUrl: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

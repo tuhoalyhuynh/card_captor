@@ -15,7 +15,9 @@ module.exports = (sequelize, DataTypes) => {
   };
   own.init({
     userId: DataTypes.INTEGER,
-    cardId: DataTypes.INTEGER
+    apiId: DataTypes.STRING,
+    name: DataTypes.STRING,
+    imageUrl: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'own',
