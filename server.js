@@ -51,12 +51,12 @@ app.use((req, res, next) => {
 // Home route
 app.get('/', (req, res) => {
   // console.log(res.locals.alerts);
-  res.render('index', { alerts: res.locals.alerts });
+  res.render('main/index', { alerts: res.locals.alerts });
 });
 
 // Profile route
 app.get('/profile', isLoggedIn, (req, res) => {
-  res.render('profile');
+  res.render('main/profile');
 });
 
 // Auth router
