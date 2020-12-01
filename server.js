@@ -1,3 +1,4 @@
+// Dependencies
 require('dotenv').config();
 const express = require('express');
 const layouts = require('express-ejs-layouts');
@@ -6,7 +7,7 @@ const session = require('express-session');
 const passport = require('./config/ppConfig');
 const flash = require('connect-flash');
 const SECRET_SESSION = process.env.SECRET_SESSION;
-console.log(SECRET_SESSION);
+// console.log(SECRET_SESSION);
 const app = express();
 
 // isLoggedIn middleware
@@ -47,17 +48,28 @@ app.use((req, res, next) => {
   next();
 })
 
+// Home route
 app.get('/', (req, res) => {
-  console.log(res.locals.alerts);
+  // console.log(res.locals.alerts);
   res.render('index', { alerts: res.locals.alerts });
 });
 
+// Profile route
 app.get('/profile', isLoggedIn, (req, res) => {
   res.render('profile');
 });
 
+// Auth router
 app.use('/auth', require('./routes/auth'));
+
+// Search router
 app.use('/search', require('./routes/search'));
+
+// Own router
+app.use('/own', require('./routes/own'));
+
+// Want router
+app.use('/want', require('./routes/want'));
 
 const PORT = process.env.PORT || 8000;
 const server = app.listen(PORT, () => {
