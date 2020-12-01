@@ -1,7 +1,7 @@
 <h2>Homepage</h2>
 
 <% if (!currentUser) { %>
-    <h3>Please <a href="/auth/signup">register</a> or <a href="/auth/login">log in</a>to use the site.</h3>
+    <h3>Please <a href="/auth/signup">register</a> or <a href="/auth/login">log in</a> to use the site.</h3>
   <% } else { %> 
     <form method="GET" action="search/results">
         <input type="text" name="name" value="">

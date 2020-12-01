@@ -8,8 +8,8 @@
 <div class="container"> 
     <% cards.forEach(function(card) { %>
         <div class="well">
-            <a href="/pokemon/:id"><img src="<%= card.imageUrl %>" alt=""></a>
-            <a href="/pokemon/:id"><h3><%= card.name %></h3></a>
+            <a href="/search/<%= card.id %>"><img src="<%= card.imageUrl %>" alt=""></a>
+            <a href="/search/<%= card.id %> "><h3><%= card.name %></h3></a>
         </div>
     <% }); %>
 </div>

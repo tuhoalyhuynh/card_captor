@@ -1,6 +1,6 @@
 nav ul li {
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
   margin-right: .3em;
 }
 
@@ -22,4 +22,9 @@ h1 {
 .well {
   margin: 15px;
   text-align: center;
+}
+
+#app {
+  font-size: 30px;
+  font-weight: bold;
 }

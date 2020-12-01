@@ -11,17 +11,19 @@
     <header>
       <nav>
         <ul>
+          <li id="app"><a href="/">Card Captor</a></li>
           <% if (!currentUser) { %>
             <li><a href="/auth/signup">Register</a></li>
             <li><a href="/auth/login">Login</a></li>
           <% } else { %> 
-            <li><a href="/auth/logout">Logout</a></li>
+            <li><a href="/own">Own</a></li>
+            <li><a href="/want">Want</a></li>
             <li><a href="/profile">Profile</a></li>
+            <li><a href="/auth/logout">Logout</a></li>
           <% } %> 
         </ul>
       </nav>
     </header>
-    <h1>Card Captor</h1>
     <%- body %>
   </body>
 </html>
