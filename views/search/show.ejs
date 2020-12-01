@@ -2,3 +2,21 @@
     <img class="card_image" src="<%= card[0].imageUrlHiRes %> " alt="">
     <h2 class="card_name"><%= card[0].name %> </h2>
 </div>
+<div class="buttons">
+    <form action="/own" method="POST">
+        <div class="form-group">
+            <input type="hidden" class="form-control" id="apiId" name="apiId" required value="<%= card[0].id %>">
+            <input type="hidden" class="form-control" id="name" name="name" required value="<%= card[0].name %>">
+            <input type="hidden" class="form-control" id="imageUrl" name="imageUrl" required value="<%= card[0].imageUrl %>">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Own">
+    </form>
+    <form action="/want" method="POST">
+        <div class="form-group">
+            <input type="hidden" class="form-control" id="apiId" name="apiId" required value="<%= card[0].id %>">
+            <input type="hidden" class="form-control" id="name" name="name" required value="<%= card[0].name %>">
+            <input type="hidden" class="form-control" id="imageUrl" name="imageUrl" required value="<%= card[0].imageUrl %>">
+        </div>
+    <input type="submit" class="btn btn-primary" value="Want">
+    </form>
+</div>

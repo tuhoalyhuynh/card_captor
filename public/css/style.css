@@ -33,7 +33,7 @@ h1 {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "card name"
     "card ."
@@ -52,4 +52,8 @@ h1 {
 
 .card_name {
   grid-area: name;
+}
+
+.buttons {
+  display: inline-flex;
 }

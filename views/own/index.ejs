@@ -1,0 +1,10 @@
+<h1 class="text-center">Cards Owned</h1>
+<hr>
+<div class="container"> 
+    <% cards.forEach(function(card) { %>
+        <div class="well">
+            <a href="/own/<%= card.id %>"><img src="<%= card.imageUrl %>" alt=""></a>
+            <a href="/own/<%= card.id %> "><h3><%= card.name %></h3></a>
+        </div>
+    <% }); %>
+</div>
