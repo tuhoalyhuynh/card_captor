@@ -28,3 +28,28 @@ h1 {
   font-size: 30px;
   font-weight: bold;
 }
+
+.card_container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "card name"
+    "card ."
+    "card ."
+    "card ."
+    "card ."
+    "card .";
+  margin: 50px auto;
+}
+
+.card_image {
+  grid-area: card;
+  width: 400px;
+  height: 550px;
+}
+
+.card_name {
+  grid-area: name;
+}
