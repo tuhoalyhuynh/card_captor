@@ -29,4 +29,17 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+    axios.get(`https://api.pokemontcg.io/v1/cards?id=${req.params.id}
+    `).then(response => {
+        if (response.status === 200){
+          console.log(response.data.cards)
+          res.render('own/show', { card: response.data.cards })
+        }
+    })
+    .catch(err => {
+        console.log(err);
+    })
+})
+
 module.exports = router;
