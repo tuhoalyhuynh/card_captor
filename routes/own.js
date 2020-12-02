@@ -18,6 +18,10 @@ router.post('/', (req, res) => {
     .then((_project) => {
       res.redirect('/own')
     })
+    .catch(err => {
+        console.log(err);
+        res.status(400).render('main/404')
+    })
 })
 
 // GET route for /own
@@ -28,6 +32,10 @@ router.get('/', (req, res) => {
     .then((cards) => {
         // console.log(cards)
         res.render('own/index', { cards })
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(400).render('main/404')
     })
 })
 
@@ -42,6 +50,7 @@ router.get('/:id', (req, res) => {
     })
     .catch(err => {
         console.log(err);
+        res.status(400).render('main/404')
     })
 })
 
@@ -58,6 +67,10 @@ router.delete('/', function (req, res) {
     })
     .then((_project) => {
         res.redirect('/own')
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(400).render('main/404')
     })
 })
 

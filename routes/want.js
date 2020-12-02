@@ -18,6 +18,10 @@ router.post('/', (req, res) => {
     .then((_project) => {
       res.redirect('/want')
     })
+    .catch(err => {
+        console.log(err);
+        res.status(400).render('main/404')
+    })
 })
 
 // GET route for /want
@@ -42,6 +46,7 @@ router.get('/:id', (req, res) => {
     })
     .catch(err => {
         console.log(err);
+        res.status(400).render('main/404')
     })
 })
 
@@ -69,6 +74,10 @@ router.post('/show', (req, res) => {
     .then((_project) => {
       res.redirect('/want')
     })
+    .catch(err => {
+        console.log(err);
+        res.status(400).render('main/404')
+    })
 })
 
 // DELETE route to remove from wants table
@@ -84,6 +93,10 @@ router.delete('/', function (req, res) {
     })
     .then((_project) => {
         res.redirect('/want')
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(400).render('main/404')
     })
 })
 

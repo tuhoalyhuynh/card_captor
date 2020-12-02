@@ -65,6 +65,7 @@ app.get('/', (req, res) => {
   })
   .catch(err => {
       console.log(err);
+      res.status(400).render('main/404')
   })
 });
 
@@ -84,6 +85,11 @@ app.use('/own', require('./routes/own'));
 
 // Want router
 app.use('/want', require('./routes/want'));
+
+// Error 404
+app.get('*', (req, res) => {
+  res.render('main/404')
+})
 
 const PORT = process.env.PORT || 8000;
 const server = app.listen(PORT, () => {

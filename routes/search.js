@@ -18,6 +18,7 @@ router.get('/results?:name', (req, res) => {
     })
     .catch(err => {
         console.log(err);
+        res.status(400).render('main/404')
     })
 })
 
@@ -31,6 +32,7 @@ router.get('/:id', (req, res) => {
     })
     .catch(err => {
         console.log(err);
+        res.status(400).render('main/404')
     })
 })
 
