@@ -1,6 +1,10 @@
 <div class="card_container">
     <img class="card_image" src="<%= card[0].imageUrlHiRes %> " alt="">
-    <h2 class="card_name"><%= card[0].name %> </h2>
+    <h2 class="card_name"><%= card[0].name %></h2>
+    <h3 class="card_series">Card Series: <%= card[0].series %></h3>
+    <h3 class="card_set">Card Set: <%= card[0].set %></h3>
+    <h3 class="card_number">Card Number: <%= card[0].number %></h3>
+    <h3 class="card_artist">Card Artist: <%= card[0].artist %></h3>
 </div>
 <div class="buttons">
     <form action="/own/?_method=DELETE" method="POST">

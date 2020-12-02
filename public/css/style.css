@@ -37,10 +37,10 @@ h1 {
   grid-template-areas:
     "card name"
     "card ."
-    "card ."
-    "card ."
-    "card ."
-    "card .";
+    "card series"
+    "card set"
+    "card number"
+    "card artist";
   margin: 50px auto;
 }
 
@@ -52,6 +52,22 @@ h1 {
 
 .card_name {
   grid-area: name;
+}
+
+.card_number {
+  grid-area: number;
+}
+
+.card_series {
+  grid-area: series;
+}
+
+.card_set {
+  grid-area: set;
+}
+
+.card_artist {
+  grid-area: artist;
 }
 
 .buttons {
