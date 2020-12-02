@@ -5,6 +5,7 @@ const db = require('../models');
 const axios = require('axios').default;
 const router = express.Router();
 
+// POST route to add to owns table
 router.post('/', (req, res) => {
     db.own.findOrCreate({
       where: {
@@ -19,6 +20,7 @@ router.post('/', (req, res) => {
     })
 })
 
+// GET route for /own
 router.get('/', (req, res) => {
     db.own.findAll({
         where: { userId: res.locals.currentUser.id }
@@ -29,6 +31,7 @@ router.get('/', (req, res) => {
     })
 })
 
+// GET route for /own/show
 router.get('/:id', (req, res) => {
     axios.get(`https://api.pokemontcg.io/v1/cards?id=${req.params.id}
     `).then(response => {
@@ -42,8 +45,9 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// DELETE route to remove from owns table
 router.delete('/', function (req, res) {
-    console.log(req.body);
+    // console.log(req.body);
     db.own.destroy({
         where: {
             userId: res.locals.currentUser.id,
