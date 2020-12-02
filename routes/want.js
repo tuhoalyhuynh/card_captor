@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
         where: { userId: res.locals.currentUser.id }
     })
     .then((cards) => {
-        console.log(cards)
+        // console.log(cards)
         res.render('want/index', { cards })
     })
 })
@@ -45,6 +45,32 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// POST route to add to owns table and deletes from want table
+router.post('/show', (req, res) => {
+    db.own.findOrCreate({
+      where: {
+          userId: res.locals.currentUser.id,
+          apiId: req.body.apiId,
+          name: req.body.name,
+          imageUrl: req.body.imageUrl
+      }
+    })
+    .then((own) => {
+        // console.log(own[0].apiId)
+        db.want.destroy({
+            where: {
+                userId: res.locals.currentUser.id,
+                apiId: own[0].apiId,
+                name: own[0].name,
+                imageUrl: own[0].imageUrl,
+            }
+        })
+    })
+    .then((_project) => {
+      res.redirect('/want')
+    })
+})
+
 // DELETE route to remove from wants table
 router.delete('/', function (req, res) {
     // console.log(req.body);
@@ -60,6 +86,5 @@ router.delete('/', function (req, res) {
         res.redirect('/want')
     })
 })
-
 
 module.exports = router;
