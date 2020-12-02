@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   </head>
   <body>
-    <%- include('partials/alerts') %> 
     <header>
-      <nav>
-        <ul>
+      <nav class="nav">
+        <ul class="nav justify-content-start">
           <li id="app"><a href="/">Card Captor</a></li>
+        </ul>
+        <ul class="nav justify-content-end">
           <% if (!currentUser) { %>
             <li><a href="/auth/signup">Register</a></li>
             <li><a href="/auth/login">Login</a></li>
@@ -24,6 +25,7 @@
           <% } %> 
         </ul>
       </nav>
+      <%- include('partials/alerts') %> 
     </header>
     <%- body %>
   </body>

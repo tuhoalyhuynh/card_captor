@@ -10,7 +10,7 @@ router.get('/results?:name', (req, res) => {
     `).then(response => {
         if (response.status === 200){
           console.log(response.data.cards)
-          res.render('search/results', { 
+          res.render('search/index', { 
               cards: response.data.cards,
               name: req.query.name
             }

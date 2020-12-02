@@ -3,8 +3,8 @@
 <div class="container"> 
     <% cards.forEach(function(card) { %>
         <div class="well">
-            <a href="/own/<%= card.apiId %>"><img src="<%= card.imageUrl %>" alt=""></a>
-            <a href="/own/<%= card.apiId %> "><h3><%= card.name %></h3></a>
+            <a href="/own/<%= card.apiId %>"><img class="card_grid" src="<%= card.imageUrl %>" alt=""></a>
+            <a href="/own/<%= card.apiId %>"><h5><%= card.name %></h5></a>
         </div>
     <% }); %>
 </div>

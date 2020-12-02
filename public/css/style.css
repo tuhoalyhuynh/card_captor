@@ -15,6 +15,7 @@ h1 {
 
 .container {
   display: inline-flex;
+  margin: auto;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
@@ -42,6 +43,11 @@ h1 {
     "card number"
     "card artist";
   margin: 50px auto;
+}
+
+.card_grid {
+  width: 247px;
+  height: 339.625px;
 }
 
 .card_image {
