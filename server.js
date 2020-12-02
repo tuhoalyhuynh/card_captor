@@ -53,7 +53,19 @@ app.use((req, res, next) => {
 // Home route
 app.get('/', (req, res) => {
   // console.log(res.locals.alerts);
-  res.render('main/index', { alerts: res.locals.alerts });
+  axios.get(`https://api.pokemontcg.io/v1/cards?name=charizard`)
+  .then(response => {
+      if (response.status === 200){
+        // console.log(response.data.cards)
+        res.render('main/index', { 
+            cards: response.data.cards,
+            alerts: res.locals.alerts
+          }
+      )}
+  })
+  .catch(err => {
+      console.log(err);
+  })
 });
 
 // Profile route
