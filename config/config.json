@@ -1,17 +1,23 @@
 {
-  "development": {
-    "database": "card_captor_development",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
-  "test": {
-    "database": "card_captor_test",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  },
-  "production": {
-    "database": "card_captor_production",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
-  }
+    "development": {
+      "username": "postgres",
+      "password": "W!nd1357818",
+      "database": "card_captor_development",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": "postgres",
+      "password": "W!nd1357818",
+      "database": "card_captor_test",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "postgres",
+      "password": "W!nd1357818",
+      "database": "card_captor_production",
+      "host": "127.0.0.1",
+      "dialect": "postgres"
+    }
 }
