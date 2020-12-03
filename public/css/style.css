@@ -1,17 +1,8 @@
 nav ul li {
   text-decoration: none;
   display: inline-flex;
-  margin-right: .5em;
   margin-top: 10px;
-}
-
-form {
-  margin: 0 auto;
-}
-
-h1 {
-  color: navy;
-  text-align: center;
+  margin-left: 20px;
 }
 
 .container {
@@ -44,7 +35,7 @@ h1 {
     "card set"
     "card number"
     "card artist";
-  margin: 50px auto;
+  margin: 50px 50px;
 }
 
 .card_grid {
@@ -80,4 +71,8 @@ h1 {
 
 .buttons {
   display: inline-flex;
+}
+
+.not_logged {
+  text-align: center;
 }

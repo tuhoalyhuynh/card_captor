@@ -1,10 +1,9 @@
-<h2>Homepage</h2>
-
 <% if (!currentUser) { %>
-    <h3>Please <a href="/auth/signup">register</a> or <a href="/auth/login">log in</a> to begin building your collection.</h3>
+    <%- include('../partials/not_logged') %>
 <% } %> 
 <form method="GET" action="search/results">
   <input type="text" name="name" value="">
+  <br>
   <button class="btn btn-primary" type="submit">Search</button>
 </form>
 <hr>

@@ -1,3 +1,4 @@
+<% if (currentUser) { %>
 <h1 class="text-center">Cards Wanted</h1>
 <hr>
 <div class="container"> 
@@ -8,3 +9,6 @@
         </div>
     <% }); %>
 </div>
+<% } else { %>
+    <%- include('../partials/not_logged') %>
+<% } %> 

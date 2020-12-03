@@ -1,3 +1,6 @@
+<% if (!currentUser) { %>
+    <%- include('../partials/not_logged') %>
+<% } %> 
 <form method="GET" action="/search/results">
     <input type="text" name="name" value="">
     <button class="btn btn-primary" type="submit">Search</button>
