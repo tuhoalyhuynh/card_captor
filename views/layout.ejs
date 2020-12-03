@@ -10,18 +10,30 @@
   <body>
     <header>
       <nav class="nav">
-        <ul class="nav justify-content-start">
-          <li id="app"><a href="/">Card Captor</a></li>
-        </ul>
         <ul class="nav justify-content-end">
+            <li class="nav-item" id="app">
+              <a class="nav-link" href="/">Card Captor</a>
+            </li>
           <% if (!currentUser) { %>
-            <li><a href="/auth/signup">Register</a></li>
-            <li><a href="/auth/login">Login</a></li>
+            <li class="nav-item">
+                <a href="/auth/signup">Register</a>
+            </li>
+            <li class="nav-item">
+                <a href="/auth/login">Login</a>
+            </li>
           <% } else { %> 
-            <li><a href="/own">Own</a></li>
-            <li><a href="/want">Want</a></li>
-            <li><a href="/profile">Profile</a></li>
-            <li><a href="/auth/logout">Logout</a></li>
+            <li class="nav-item">
+                <a href="/own">Own</a>
+            </li>
+            <li class="nav-item">
+                <a href="/want">Want</a>
+            </li>
+            <li class="nav-item">
+                <a href="/profile">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a href="/auth/logout">Logout</a>
+            </li>
           <% } %> 
         </ul>
       </nav>

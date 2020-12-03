@@ -1,7 +1,8 @@
 nav ul li {
   text-decoration: none;
   display: inline-flex;
-  margin-right: .3em;
+  margin-right: .5em;
+  margin-top: 10px;
 }
 
 form {
@@ -28,6 +29,7 @@ h1 {
 #app {
   font-size: 30px;
   font-weight: bold;
+  margin-top: 0;
 }
 
 .card_container {
