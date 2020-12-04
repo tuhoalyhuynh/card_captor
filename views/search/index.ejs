@@ -3,10 +3,10 @@
 <% } %> 
 <form method="GET" action="/search/results">
     <input type="text" name="name" value="">
-    <button class="btn btn-primary" type="submit">Search</button>
+    <button class="btn btn-info" type="submit">Search</button>
 </form>
 
-<h1 class="text-center">Search results for "<%= name %>"</h1>
+<h1 class="text-center text_display">Search results for "<%= name %>"</h1>
 <hr>
 <div class="container"> 
     <% cards.forEach(function(card) { %>

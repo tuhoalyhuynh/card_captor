@@ -2,25 +2,30 @@ nav ul li {
   text-decoration: none;
   display: inline-flex;
   margin-top: 10px;
-  margin-left: 20px;
-}
-
-.container {
-  display: inline-flex;
-  margin: auto;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-
-.well {
-  margin: 15px;
-  text-align: center;
+  margin-left: 15px;
 }
 
 #app {
   font-size: 30px;
   font-weight: bold;
   margin-top: 0;
+  margin-left: 20px;
+}
+
+.container {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.card_grid {
+  width: 247px;
+  height: 339.625px;
+}
+
+.well {
+  margin: auto;
+  text-align: center;
 }
 
 .card_container {
@@ -29,18 +34,13 @@ nav ul li {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "card name"
-    "card ."
-    "card series"
-    "card set"
-    "card number"
-    "card artist";
-  margin: 50px 50px;
-}
-
-.card_grid {
-  width: 247px;
-  height: 339.625px;
+  "card name"
+  "card ."
+  "card series"
+  "card set"
+  "card number"
+  "card artist";
+  margin: 50px 50px 0 50px;
 }
 
 .card_image {
@@ -69,10 +69,60 @@ nav ul li {
   grid-area: artist;
 }
 
-.buttons {
-  display: inline-flex;
-}
-
 .not_logged {
   text-align: center;
+}
+
+form {
+  display: block;
+  width: 300px;
+  margin: 25px auto;
+}
+
+input {
+  width: 300px;
+}
+
+.btn {
+  width: 100px;
+}
+
+.btn-info {
+  margin: 10px auto;
+  margin-left: 100px;
+
+}
+
+.btn-primary, .btn-danger, .btn-warning {
+  margin: 0 auto;
+  margin-left: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  nav ul li {
+    font-size: 15px;
+  }
+
+  #app {
+    font-size: 20px;
+    margin-left: 15px;
+  }
+  
+  .text_display {
+    font-size: 25px;
+  }
+
+  .card_container {
+    display: block;
+    margin: 50px auto;
+  }
+
+  .card_image {
+    margin: 50px 100px 0 100px;
+  }
+
+  .card_name, .card_series, .card_set, .card_number, .card_artist {
+    text-align: center;
+    margin-top: 10px;
+  }
 }
