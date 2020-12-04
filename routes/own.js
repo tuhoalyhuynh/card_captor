@@ -5,8 +5,10 @@ const db = require('../models');
 const axios = require('axios').default;
 const router = express.Router();
 
+const isLoggedIn = require('../middleware/isLoggedIn');
+
 // POST route to add to owns table
-router.post('/', (req, res) => {
+router.post('/', isLoggedIn, (req, res) => {
     db.own.findOrCreate({
       where: {
           userId: res.locals.currentUser.id,
@@ -25,7 +27,7 @@ router.post('/', (req, res) => {
 })
 
 // GET route for /own
-router.get('/', (req, res) => {
+router.get('/', isLoggedIn, (req, res) => {
     db.own.findAll({
         where: { userId: res.locals.currentUser.id }
     })
@@ -40,7 +42,7 @@ router.get('/', (req, res) => {
 })
 
 // GET route for /own/show
-router.get('/:id', (req, res) => {
+router.get('/:id', isLoggedIn, (req, res) => {
     axios.get(`https://api.pokemontcg.io/v1/cards?id=${req.params.id}
     `).then(response => {
         if (response.status === 200){
@@ -55,7 +57,7 @@ router.get('/:id', (req, res) => {
 })
 
 // DELETE route to remove from owns table
-router.delete('/', function (req, res) {
+router.delete('/', isLoggedIn, (req, res) => {
     // console.log(req.body);
     db.own.destroy({
         where: {
