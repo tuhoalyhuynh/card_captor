@@ -1,0 +1,10 @@
+<% if (currentUser) { %>
+<br>
+<h3 class="text-center">Name: <%= user.name %></h3>
+<h3 class="text-center">Email <%= user.email %> </h3>
+<form action="/profile/edit" method="GET">
+    <input type="submit" class="btn btn-secondary" value="Edit">
+</form>
+<% } else { %>
+    <%- include('../partials/not_logged') %>
+<% } %> 

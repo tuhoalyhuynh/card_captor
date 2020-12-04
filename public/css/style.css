@@ -13,7 +13,7 @@ nav ul li {
 }
 
 .container {
-  display: inline-flex;
+  display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
@@ -29,7 +29,9 @@ nav ul li {
 }
 
 .card_container {
+  width: 1200px;
   display: grid;
+  justify-self: center;
   align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -40,7 +42,7 @@ nav ul li {
   "card set"
   "card number"
   "card artist";
-  margin: 50px 50px 0 50px;
+  margin: 50px auto 0 auto;
 }
 
 .card_image {
@@ -87,10 +89,9 @@ input {
   width: 100px;
 }
 
-.btn-info {
+.btn-info, .btn-secondary {
   margin: 10px auto;
   margin-left: 100px;
-
 }
 
 .btn-primary, .btn-danger, .btn-warning {
@@ -113,12 +114,13 @@ input {
   }
 
   .card_container {
+    width: 600px;
     display: block;
     margin: 50px auto;
   }
 
   .card_image {
-    margin: 50px 100px 0 100px;
+    margin: 25px 100px 0 100px;
   }
 
   .card_name, .card_series, .card_set, .card_number, .card_artist {

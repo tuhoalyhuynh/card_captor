@@ -69,13 +69,11 @@ app.get('/', (req, res) => {
   })
 });
 
-// Profile route
-app.get('/profile', isLoggedIn, (req, res) => {
-  res.render('main/profile');
-});
-
 // Auth router
 app.use('/auth', require('./routes/auth'));
+
+// Profile router
+app.use('/profile', require('./routes/profile'))
 
 // Search router
 app.use('/search', require('./routes/search'));
