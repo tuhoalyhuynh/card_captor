@@ -99,6 +99,12 @@ input {
   margin-left: 100px;
 }
 
+#pikachu {
+  display: block;
+  width: 415px;
+  margin: 10px auto;
+}
+
 @media screen and (max-width: 600px) {
   nav ul li {
     font-size: 15px;

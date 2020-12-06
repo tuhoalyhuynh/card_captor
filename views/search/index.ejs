@@ -5,7 +5,9 @@
     <input type="text" name="name" value="">
     <button class="btn btn-info" type="submit">Search</button>
 </form>
-
+<% if (cards.length < 1) { %>
+    <h1 class="text-center text_display">There are no results for "<%= name %>"</h1>
+<% } else { %> 
 <h1 class="text-center text_display">Search results for "<%= name %>"</h1>
 <hr>
 <div class="container"> 
@@ -16,3 +18,4 @@
         </div>
     <% }); %>
 </div>
+<% }; %> 
