@@ -1,11 +1,19 @@
 <% if (!currentUser) { %>
-    <%- include('../partials/not_logged') %>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-5">Card Captor</h1>
+      <p class="lead">Card Captor is a web app that allows users to search and catalogue their pokemon cards. Users can add cards they own or want to separate lists. Once cards are added to a list they are displayed in the "Own" or "Want" sections. From there, users can remove cards they own or want and even reassign a card from want to earn.</p>
+    </div>
+</div>
 <% } %> 
 <form method="GET" action="search/results">
   <input type="text" name="name" value="">
   <br>
   <button class="btn btn-info" type="submit">Search</button>
 </form>
+<% if (!currentUser) { %>
+    <%- include('../partials/not_logged') %>
+<% } %> 
 <hr>
 <div class="container"> 
     <% cards.forEach(function(card) { %>
