@@ -87,8 +87,6 @@ app.get('*', (req, res) => {
 })
 
 const PORT = process.env.PORT || 8000;
-const server = app.listen(PORT, () => {
-  console.log(`🎧 You're listening to the smooth sounds of port ${PORT} 🎧`);
-});
+const server = app.listen(PORT);
 
 module.exports = server;
