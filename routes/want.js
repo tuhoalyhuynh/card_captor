@@ -32,7 +32,6 @@ router.get('/', isLoggedIn, (req, res) => {
         where: { userId: res.locals.currentUser.id }
     })
     .then((cards) => {
-        // console.log(cards)
         res.render('want/index', { cards })
     })
 })
@@ -42,7 +41,6 @@ router.get('/:id', isLoggedIn, (req, res) => {
     axios.get(`https://api.pokemontcg.io/v1/cards?id=${req.params.id}
     `).then(response => {
         if (response.status === 200){
-        //   console.log(response.data.cards)
           res.render('want/show', { card: response.data.cards })
         }
     })
@@ -63,7 +61,6 @@ router.post('/show', isLoggedIn, (req, res) => {
       }
     })
     .then((own) => {
-        // console.log(own[0].apiId)
         db.want.destroy({
             where: {
                 userId: res.locals.currentUser.id,
@@ -84,7 +81,6 @@ router.post('/show', isLoggedIn, (req, res) => {
 
 // DELETE route to remove from wants table
 router.delete('/', isLoggedIn, (req, res) => {
-    // console.log(req.body);
     db.want.destroy({
         where: {
             userId: res.locals.currentUser.id,
