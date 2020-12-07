@@ -81,6 +81,7 @@ router.post('/show', isLoggedIn, (req, res) => {
 ## Future Goals
 
 * Various sorting and filtering options for index pages
+* Ability to add cards to own/want directly from index without redirecting
 * Buy/Sell functionality with eBay API
 * Additional trading cards
 
